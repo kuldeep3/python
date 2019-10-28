@@ -1,0 +1,37 @@
+t=int(input())
+while(t):
+    x=int(input())
+    l=list(map(int,input().split()))
+    n=x//4
+    l.sort()
+    c=0
+    count=0
+    a=0
+    while(c<n):
+        a+=1
+        c+=1
+    if(l[a]!=l[a-1]):    
+        x1=l[a]
+    else:
+        count=1
+    c=0
+    while(c<n):
+        a+=1
+        c+=1
+    if(l[a]!=l[a-1]):
+        y1=l[a]
+    else:
+        count=1
+    c=0
+    while(c<n):
+        a+=1
+        c+=1
+    if(l[a]!=l[a-1]):
+        z1=l[a]
+    else:
+        count=1
+    if(x1!=y1 and y1!=z1 and count==0):
+        print(str(x1)+" "+str(y1)+" "+str(z1))
+    else:
+        print("-1")
+    t-=1
